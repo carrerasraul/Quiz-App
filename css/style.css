@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    border-style: solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.controls {
+    text-align: center;
+    border-style: solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.quiz-progress {
+    text-align: center;
+    border-style: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.number-correct {
+    text-align: center;
+    border-style: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
