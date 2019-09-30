@@ -6,43 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz App</title>
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
+    <div class="header">
         <header>
             <h1>Do you actually skate?</h1>
         </header>
     </div>
 
-    <div id="container" class="container">
-        <div id="question-container"></div>
-        <div id='question'>QUESTION</div>
-        <div id='answer-btns' class="answer-btn">
-            <button class='btn'>Answer</button>
-            <button class='btn'>Answer</button>
-            <button class='btn'>Answer</button>
-            <button class='btn'>Answer</button>
-        </div>
-    </div>
+
+    <main>
+        <section id="main-container" class="container">
+            <div id="question-container"></div>
+            <p id="question">QUESTION</p>
+            <div id="answer-btns" class="answer-btn">
+                <input type="radio" class="btn1">Answer</input>
+                <input type="radio" class="btn2">Answer</input>
+                <input type="radio" class="btn3">Answer</input>
+                <input type="radio" class="btn4">Answer</input>
+            </div>
+        </section>
 
 
-    <div class='controls'>
-        <button id='start-btn' class="start-btn">START</button>
-        <button id='next-btn' class="next-btn">NEXT</button>
-    </div>
+        <section class="controls">
+            <button id="start-btn" class="start-btn">START</button>
+            <button id="next-btn" class="next-btn">NEXT</button>
+        </section>
+    </main>
 
-    <section>
+    <footer>
         <ul>
             <li>
-                <span class='quiz-progress'>Question: <span class="question-num">0</span>/5</span>
+                <span class="quiz-progress">Question: <span class="question-num">0</span>/5</span>
             </li>
             <li>
                 <span class="number-correct">Current Score: <span class="num-correct">0</span>/5</span>
             </li>
         </ul>
-    </section>
+    </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
