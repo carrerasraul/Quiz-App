@@ -1,42 +1,116 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+    background-image: url("https://i.imgur.com/aBk5ULH.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
 }
 
 .header h1 {
     text-align: center;
+    margin-top: 10%
 }
 
 .container {
     text-align: center;
+    background-color: lightgray;
     border-style: solid;
     padding-bottom: 15px;
+    border-radius: 5%;
     padding-top: 15px;
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 2%
 }
 
 .controls {
-    text-align: center;
     border-style: solid;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
     margin-left: 45%;
     margin-right: 45%;
+    margin-top: 3%;
+}
+
+.btn1:hover {
+    background: black;
+    color: white
+}
+
+.btn2:hover {
+    background: black;
+    color: white
+}
+
+.btn3:hover {
+    background: black;
+    color: white
+}
+
+.btn4:hover {
+    background: black;
+    color: white
+}
+
+.quiz-bar {
+    border-radius: 5%;
+    float: left;
+    width: 50%;
+    margin-top: 3%;
+}
+
+.score {
+    border-radius: 5%;
+    float: right;
+    width: 50%;
+    margin-top: 3%
 }
 
 .quiz-progress {
     text-align: center;
+    background-color: lightgray;
     border-style: solid;
     padding-top: 5px;
     padding-bottom: 5px;
     position: relative;
+    display: block;
+    margin-right: 25%;
+    margin-left: 25%
 }
 
 .number-correct {
     text-align: center;
+    background-color: lightgray;
     border-style: solid;
+    border-radius: 5%;
     padding-top: 5px;
     padding-bottom: 5px;
+    display: block;
+    margin-right: 25%;
+    margin-left: 25%
+}
+
+.start-btn {
+    float: left
+}
+
+.next-btn {
+    float: right
+}
+
+.start-btn:hover {
+    background: black;
+    color: white;
+}
+
+.next-btn:hover {
+    background: black;
+    color: white;
+}
+
+.hide {
+    display: none
 }
