@@ -35,24 +35,58 @@ body {
     margin-top: 3%;
 }
 
+.answer-btn {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 5px;
+}
+
+.btn1 {
+    padding: 5px;
+    margin: 5px;
+    border: solid;
+}
+
+.btn2 {
+    padding: 5px;
+    margin: 5px;
+    border: solid;
+}
+
+.btn3 {
+    padding: 5px;
+    margin: 5px;
+    border: solid;
+}
+
+.btn4 {
+    padding: 5px;
+    margin: 5px;
+    border: solid;
+}
+
 .btn1:hover {
     background: black;
-    color: white
+    color: white;
+    border: solid;
 }
 
 .btn2:hover {
     background: black;
-    color: white
+    color: white;
+    border: solid
 }
 
 .btn3:hover {
     background: black;
-    color: white
+    color: white;
+    border: solid
 }
 
 .btn4:hover {
     background: black;
-    color: white
+    color: white;
+    border: solid
 }
 
 .quiz-bar {
