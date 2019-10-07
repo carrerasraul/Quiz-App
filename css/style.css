@@ -49,56 +49,27 @@ body {
     padding: 5px;
 }
 
-.btn1 {
+.btn {
     padding: 5px;
     margin: 5px;
     border: solid;
     border-radius: 5%
 }
 
-.btn2 {
-    padding: 5px;
-    margin: 5px;
-    border: solid;
-    border-radius: 5%;
-}
-
-.btn3 {
-    padding: 5px;
-    margin: 5px;
-    border: solid;
-    border: 5%
-}
-
-.btn4 {
-    padding: 5px;
-    margin: 5px;
-    border: solid;
-    border-radius: 5%
-}
-
-.btn1:hover {
+.btn:hover {
     background: black;
     color: white;
     border: solid;
 }
 
-.btn2:hover {
-    background: black;
-    color: white;
-    border: solid
+.btn.correct {
+    --hue: var(--hue.correct);
+    background-color: lightgreen
 }
 
-.btn3:hover {
-    background: black;
-    color: white;
-    border: solid
-}
-
-.btn4:hover {
-    background: black;
-    color: white;
-    border: solid
+.btn.wrong {
+    --hue: var(--hue.wrong);
+    background-color: red
 }
 
 .quiz-bar {
