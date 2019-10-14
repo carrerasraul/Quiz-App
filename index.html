@@ -12,43 +12,33 @@
 <body>
     <div class="header">
         <header>
-            <h1 class="do-you">Do You Actually Skate?</h1>
+            <h1 id="find-out" class="do-you">Do You Actually Skate?</h1>
         </header>
     </div>
 
     <main>
-        <section id="main-container" class="container">
-            <div id="start-container"></div>
-            <p>Take The Quiz And Find Out!</p>
 
-            <div id="question-container" class="hide"></div>
-            <p id="question">QUESTION</p>
-            <div id="answer-btns" class="answer-btn hide">
-                <button class="btn">Answer</button>
-                <button class="btn">Answer</button>
-                <button class="btn">Answer</button>
-                <button class="btn">Answer</button>
+        <section id="main-container" class="container">
+
+            <div id="start-container">
+                <p>Take The Quiz And Find Out!</p>
             </div>
+
+            <div id="question-container"></div>
 
             <div class="controls">
                 <button id="start" class="start-btn">START</button>
                 <button id="next-btn" class="next-btn hide">NEXT</button>
             </div>
 
-
         </section>
-
 
     </main>
 
     <footer>
-        <div id="quiz-progress-bar" class="quiz-bar">
-            <span class="quiz-progress">Question: <span class="question-num">0</span>/5</span>
-        </div>
 
-        <div id="quiz-score" class="score">
-            <span class="number-correct">Current Score: <span class="num-correct">0</span>/5</span>
-        </div>
+        <div class="score-and-question"></div>
+
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
