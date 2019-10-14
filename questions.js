@@ -1,6 +1,6 @@
 const STORE = {
     questions: [{
-            question: "What is the name of the sandpaper like material that is on top of the skateboard?".
+            question: "What is the name of the sandpaper like material that is on top of the skateboard?",
             options: [
                 "Griptape",
                 "Sandpaper",
@@ -47,6 +47,7 @@ const STORE = {
                 "Ken Block",
                 "Jake Johnson"
             ],
+            answer: "Ken Block"
         }
 
     ],
