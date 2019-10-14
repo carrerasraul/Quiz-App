@@ -40,7 +40,6 @@ function displayQuestion() {
     </div>`);
 
     $('#question-container').html(questionList)
-    nextButton.classList.remove('hide')
     updateQuestionAndScore()
 }
 
@@ -50,6 +49,7 @@ function correctAnswer() {
     } else {
         Element.classList.add('wrong')
     }
+    nextButton.classList.remove('hide')
 }
 
 function chooseAnswer() {
