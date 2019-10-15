@@ -116,6 +116,12 @@ body {
     border-radius: 5%
 }
 
+.submit-btn {
+    float: initial;
+    border: solid;
+    border-radius: 5%
+}
+
 .next-btn {
     float: right;
     border: solid;
@@ -134,4 +140,18 @@ body {
 
 .hide {
     display: none
+}
+
+.result-box-correct {
+    border: solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: green
+}
+
+.result-box-wrong {
+    border: solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: red
 }
