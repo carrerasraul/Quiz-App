@@ -77,9 +77,9 @@ function handleCheckAnswer(evt) {
         submitButton.classList.add('hide')
         nextButton.classList.remove('hide')
     } else {
-        STORE.currentQuestion < 5 &&
-            STORE.currentQuestion++
-            selectedAnswer = ""
+        //STORE.currentQuestion < 5 && 
+        //STORE.currentQuestion++
+        selectedAnswer = ""
         selectedElement.style.border = "3px solid red"
         mainContainer.style.border = "5px solid red"
         let feedbackWrong = `<section class="result-box-wrong">Wrong! The correct answer is "${STORE.questions[STORE.currentQuestion].answer}"</section>`
