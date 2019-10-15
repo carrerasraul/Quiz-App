@@ -122,6 +122,12 @@ body {
     border-radius: 5%
 }
 
+.restart-btn {
+    float: initial;
+    border: solid;
+    border-radius: 5%
+}
+
 .next-btn {
     float: right;
     border: solid;
