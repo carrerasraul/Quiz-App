@@ -9,9 +9,9 @@ const mainContainer = document.getElementById('main-container')
 const messageBanner = document.getElementById('find-out')
 
 
-let question, 
-    answerButtons, 
-    selectedAnswer, 
+let question,
+    answerButtons,
+    selectedAnswer,
     selectedElement,
     correctAnswer;
 
@@ -19,7 +19,7 @@ let question,
 startButton.addEventListener('click', startQuiz)
 submitButton.addEventListener('click', handleCheckAnswer)
 nextButton.addEventListener('click', displayQuestion)
-restartButton.addEventListener('click', finalResults)
+restartButton.addEventListener('click', restartQuiz)
 
 
 function startQuiz() {
@@ -27,6 +27,7 @@ function startQuiz() {
         displayQuestion();
         startButton.classList.add('hide')
         findOut.classList.add('hide')
+        restartButton.classList.add('hide')
     });
 }
 
@@ -87,9 +88,9 @@ function handleCheckAnswer(evt) {
         submitButton.classList.add('hide')
         nextButton.classList.remove('hide')
     } else {
-        STORE.currentQuestion < 5 && 
-        STORE.currentQuestion++
-        selectedAnswer = ""
+        STORE.currentQuestion < 5 &&
+            STORE.currentQuestion++
+            selectedAnswer = ""
         selectedElement.style.border = "3px solid red"
         mainContainer.style.border = "5px solid red"
         let feedbackWrong = `<section class="result-box-wrong">Wrong! The correct answer is "${correctAnswer}"</section>`
@@ -101,7 +102,7 @@ function handleCheckAnswer(evt) {
 }
 
 function updateBorder(element) {
-    if(element) {
+    if (element) {
         setTimeout(function() {
             element.style.border = "3px solid black"
         }, 1000)
@@ -109,21 +110,20 @@ function updateBorder(element) {
 }
 
 function finalResults() {
-  let resultsScreen = $(
-    `<div id="question-container">
+    let resultsScreen = $(
+        `<div id="question-container">
             <p id="complete">COMPLETE!</p>
 
-            <p>You Scored: ${STORE.score} / ${STORE.questions.length}</p>
-
-            <div class="controls">
-                <button id="restart" class="restart-btn">RESTART QUIZ</button></div> </div>`);
+            <p>You Scored: ${STORE.score} / ${STORE.questions.length}</p> </div>`);
     STORE.currentQuestion = 0;
     STORE.score = 0;
-  $("question-container").html(resultsScreen);
+    $("#question-container").html(resultsScreen);
+    nextButton.classList.add('hide')
+    restartButton.classList.remove('hide')
 }
 
 function restartQuiz() {
-  window.location.reload()
+    window.location.reload()
 }
 
 startQuiz()
