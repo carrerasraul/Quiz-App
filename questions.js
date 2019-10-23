@@ -40,7 +40,7 @@ const STORE = {
             answer: "Thrasher Magazine"
         },
         {
-            question: "Which of the following is NOT a proffesional skateboarder?",
+            question: "Which of the following is NOT a profesional skateboarder?",
             options: [
                 "Geoff Rowley",
                 "Andrew Reynolds",
