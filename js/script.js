@@ -10,6 +10,7 @@ const messageBanner = document.getElementById('find-out')
 
 
 let question,
+    scored,
     answerButtons,
     selectedAnswer,
     selectedElement,
@@ -28,6 +29,7 @@ function startQuiz() {
         startButton.classList.add('hide')
         findOut.classList.add('hide')
         restartButton.classList.add('hide')
+        scored = false
     });
 }
 
@@ -46,6 +48,7 @@ function displayQuestion() {
     if (STORE.currentQuestion === STORE.questions.length) {
         finalResults()
     } else {
+        scored = false
         question = STORE.questions[STORE.currentQuestion];
         correctAnswer = question.answer;
         updateBorder(mainContainer)
@@ -68,13 +71,16 @@ function displayQuestion() {
 }
 
 function handleAnswerSelection(evt) {
-    submitButton.classList.remove('hide')
-    selectedAnswer = evt.target.textContent
-    selectedElement = evt.target
+    if (scored) return
+    selectedAnswer = evt ? evt.target.textContent : null
+    selectedElement = evt ? evt.target : null
+    selectedElement.style.border = "5px solid blue"
 }
 
 function handleCheckAnswer(evt) {
-    if (!selectedAnswer) return
+    if (!selectedAnswer) {
+        return handleQuestionSelectRequired();
+    }
     if (STORE.questions[STORE.currentQuestion].answer === selectedAnswer) {
         STORE.score++
             STORE.currentQuestion < 5 && STORE.currentQuestion++
@@ -85,6 +91,7 @@ function handleCheckAnswer(evt) {
         let feedbackCorrect = `<section class="result-box-correct">Correct!</section>`
         $('#answer-btns').append(feedbackCorrect)
         updateScore()
+        scored = true;
         submitButton.classList.add('hide')
         nextButton.classList.remove('hide')
     } else {
@@ -96,10 +103,21 @@ function handleCheckAnswer(evt) {
         let feedbackWrong = `<section class="result-box-wrong">Wrong! The correct answer is "${correctAnswer}"</section>`
         $('#answer-btns').append(feedbackWrong)
         correctAnswer = "";
+        scored = true;
         submitButton.classList.add('hide')
         nextButton.classList.remove('hide')
     }
 }
+
+function handleQuestionSelectRequired() {
+    messageBanner.textContent = ""
+    messageBanner.classList.add('select-answer-banner')
+    setTimeout(() => {
+        messageBanner.classList.remove('select-answer-banner')
+        messageBanner.textContent = "Do You Actually Skate?"
+    }, 1500)
+}
+
 
 function updateBorder(element) {
     if (element) {
@@ -113,7 +131,6 @@ function finalResults() {
     let resultsScreen = $(
         `<div id="question-container">
             <p id="complete">COMPLETE!</p>
-
             <p>You Scored: ${STORE.score} / ${STORE.questions.length}</p> </div>`);
     STORE.currentQuestion = 0;
     STORE.score = 0;
