@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://i.imgur.com/aBk5ULH.jpg");
+    background-image: url("https://i.imgur.com/jc5tCHt.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
@@ -10,24 +10,30 @@ body {
     margin-top: 10%;
 }
 
+.select-answer-banner::after {
+    content: "Please Select Answer First";
+    color: red;
+}
+
 .do-you {
     border: solid;
+    width: 390px;
     border-color: black;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 38%;
+    padding-right: 10px;
     background-color: lightgray;
     color: black
 }
 
 .container {
     text-align: center;
+    width: 400px;
     background-color: lightgray;
     border-style: solid;
     padding-bottom: 15px;
     border-radius: 5%;
     padding-top: 15px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 38%;
     margin-top: 2%
 }
 
@@ -88,26 +94,31 @@ body {
 
 .quiz-progress {
     text-align: center;
+    width: 150px;
     background-color: lightgray;
+    float: left;
     border-style: solid;
     padding-top: 5px;
     padding-bottom: 5px;
-    position: relative;
+    display: inline-block;
     display: block;
-    margin-right: 25%;
-    margin-left: 25%
+    //margin-right: 20%;
+    margin-left: 75%
 }
 
 .number-correct {
     text-align: center;
+    width: 150px;
     background-color: lightgray;
+    display: inline-block;
     border-style: solid;
+    float: right;
     border-radius: 5%;
     padding-top: 5px;
     padding-bottom: 5px;
     display: block;
-    margin-right: 25%;
-    margin-left: 25%
+    margin-right: 67%;
+    //margin-left: 20%
 }
 
 .start-btn {
